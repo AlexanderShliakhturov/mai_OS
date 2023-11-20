@@ -41,6 +41,12 @@ int main()
         }
         write(1, result, i + 1);
     }
+
+    if (n < 0) {
+        perror("read 1");
+        exit(EXIT_FAILURE);
+    }
+    
     closeFD(0);
     closeFD(1);
 }
